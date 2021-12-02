@@ -211,7 +211,88 @@ steps:
       $ErrorActionPreference = "Stop"
       $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
       exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
-    displayName: Run smoke tests (Electron)
+    displayName: Run smoke tests (Electron) 1
+    timeoutInMinutes: 10
+    condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
+
+  - powershell: |
+      . build/azure-pipelines/win32/exec.ps1
+      $ErrorActionPreference = "Stop"
+      $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
+      exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
+    displayName: Run smoke tests (Electron) 2
+    timeoutInMinutes: 10
+    condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
+
+  - powershell: |
+      . build/azure-pipelines/win32/exec.ps1
+      $ErrorActionPreference = "Stop"
+      $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
+      exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
+    displayName: Run smoke tests (Electron) 3
+    timeoutInMinutes: 10
+    condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
+
+  - powershell: |
+      . build/azure-pipelines/win32/exec.ps1
+      $ErrorActionPreference = "Stop"
+      $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
+      exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
+    displayName: Run smoke tests (Electron) 4
+    timeoutInMinutes: 10
+    condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
+
+  - powershell: |
+      . build/azure-pipelines/win32/exec.ps1
+      $ErrorActionPreference = "Stop"
+      $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
+      exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
+    displayName: Run smoke tests (Electron) 5
+    timeoutInMinutes: 10
+    condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
+
+  - powershell: |
+      . build/azure-pipelines/win32/exec.ps1
+      $ErrorActionPreference = "Stop"
+      $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
+      exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
+    displayName: Run smoke tests (Electron) 6
+    timeoutInMinutes: 10
+    condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
+
+  - powershell: |
+      . build/azure-pipelines/win32/exec.ps1
+      $ErrorActionPreference = "Stop"
+      $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
+      exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
+    displayName: Run smoke tests (Electron) 7
+    timeoutInMinutes: 10
+    condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
+
+  - powershell: |
+      . build/azure-pipelines/win32/exec.ps1
+      $ErrorActionPreference = "Stop"
+      $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
+      exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
+    displayName: Run smoke tests (Electron) 8
+    timeoutInMinutes: 10
+    condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
+
+  - powershell: |
+      . build/azure-pipelines/win32/exec.ps1
+      $ErrorActionPreference = "Stop"
+      $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
+      exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
+    displayName: Run smoke tests (Electron) 9
+    timeoutInMinutes: 10
+    condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
+
+  - powershell: |
+      . build/azure-pipelines/win32/exec.ps1
+      $ErrorActionPreference = "Stop"
+      $AppRoot = "$(agent.builddirectory)\VSCode-win32-$(VSCODE_ARCH)"
+      exec { yarn smoketest-no-compile --build "$AppRoot" --screenshots $(Build.SourcesDirectory)\.build\logs\smoke-tests }
+    displayName: Run smoke tests (Electron) 10
     timeoutInMinutes: 10
     condition: and(succeeded(), eq(variables['VSCODE_STEP_ON_IT'], 'false'), ne(variables['VSCODE_ARCH'], 'arm64'))
 
